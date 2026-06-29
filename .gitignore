@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 docs/*
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Claude Code local (machine-specific) settings
+.claude/settings.local.json
