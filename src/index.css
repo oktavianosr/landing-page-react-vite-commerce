@@ -1,18 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
+@custom-variant dark (&:is(.dark *));
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+ * Kaka Kana — warm & appetizing theme.
+ * Brand: primary crimson (#de2c4d) + secondary orange (#fb923c),
+ * sitting on a soft cream canvas. Colors in OKLCH for perceptual consistency.
+ */
+:root {
+  --radius: 0.85rem;
 
-@layer components {
-    .primary-btn {
-        @apply bg-primary text-white px-6 py-3 font-semibold rounded-xl hover:!scale-110 duration-300 shadow-[0px_10px_14px_-7px_#de0029] ;
-    }
+  --background: oklch(0.9912 0.0098 83.42);
+  --foreground: oklch(0.2783 0.0258 47.52);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2783 0.0258 47.52);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2783 0.0258 47.52);
+
+  --primary: oklch(0.585 0.2058 16.02);
+  --primary-foreground: oklch(0.99 0.01 83);
+
+  --secondary: oklch(0.7837 0.1535 56.32);
+  --secondary-foreground: oklch(0.2783 0.0258 47.52);
+
+  --muted: oklch(0.9633 0.0125 75.5);
+  --muted-foreground: oklch(0.551 0.022 49.77);
+
+  --accent: oklch(0.9489 0.0314 62.74);
+  --accent-foreground: oklch(0.3 0.045 40);
+
+  --destructive: oklch(0.5771 0.2152 27.33);
+  --destructive-foreground: oklch(0.99 0.01 83);
+
+  --border: oklch(0.917 0.011 70.9);
+  --input: oklch(0.917 0.011 70.9);
+  --ring: oklch(0.585 0.2058 16.02);
+
+  --chart-1: oklch(0.585 0.2058 16.02);
+  --chart-2: oklch(0.7837 0.1535 56.32);
+  --chart-3: oklch(0.828 0.13 84);
+  --chart-4: oklch(0.67 0.16 35);
+  --chart-5: oklch(0.5 0.13 30);
+
+  --font-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Averia Serif Libre', ui-serif, serif;
+  --font-mono: ui-monospace, monospace;
+
+  --shadow-brand: 0px 10px 30px -12px oklch(0.585 0.2058 16.02 / 0.45);
+  --shadow-soft: 0px 8px 30px -10px oklch(0.2783 0.0258 47.52 / 0.18);
+}
+
+.dark {
+  --background: oklch(0.2103 0.0137 47.6);
+  --foreground: oklch(0.97 0.008 83);
+
+  --card: oklch(0.2683 0.0177 47.6);
+  --card-foreground: oklch(0.97 0.008 83);
+  --popover: oklch(0.2683 0.0177 47.6);
+  --popover-foreground: oklch(0.97 0.008 83);
+
+  --primary: oklch(0.645 0.2 16.5);
+  --primary-foreground: oklch(0.99 0.01 83);
+
+  --secondary: oklch(0.7837 0.1535 56.32);
+  --secondary-foreground: oklch(0.21 0.014 47.6);
+
+  --muted: oklch(0.3183 0.0177 47.6);
+  --muted-foreground: oklch(0.72 0.018 70);
+
+  --accent: oklch(0.36 0.04 50);
+  --accent-foreground: oklch(0.97 0.008 83);
+
+  --destructive: oklch(0.65 0.2 27);
+  --destructive-foreground: oklch(0.99 0.01 83);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.645 0.2 16.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 12px);
+
+  --shadow-brand: var(--shadow-brand);
+  --shadow-soft: var(--shadow-soft);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @variant sm {
+    padding-inline: 2rem;
+  }
+  @variant lg {
+    padding-inline: 4rem;
+  }
+  @variant xl {
+    padding-inline: 5rem;
+  }
+  @variant 2xl {
+    padding-inline: 6rem;
+    max-width: 1280px;
+  }
 }
 
 @layer utilities {
-    .drop-shadow {
-        filter: drop-shadow(-6px 8px 15px rgb(0, 0, 0, 0.2));
-    }
+  .drop-shadow-brand {
+    filter: drop-shadow(-6px 8px 15px rgb(0 0 0 / 0.2));
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
 }
