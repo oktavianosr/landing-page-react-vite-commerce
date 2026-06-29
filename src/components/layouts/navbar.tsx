@@ -16,18 +16,21 @@ import { useCartStore } from '@/stores/cart-store';
 import { useUiStore } from '@/stores/ui-store';
 
 import AppLogo from './app-logo';
+import CartDrawer from './cart-drawer';
 import { navItems } from './nav-data';
 
 function CartButton({ className }: { className?: string }) {
   const count = useCartStore((state) =>
     state.items.reduce((total, item) => total + item.quantity, 0)
   );
+  const setCartOpen = useUiStore((state) => state.setCartOpen);
 
   return (
     <Button
       variant="ghost"
       size="icon"
       aria-label="Keranjang belanja"
+      onClick={() => setCartOpen(true)}
       className={cn('relative rounded-full', className)}
     >
       <ShoppingCart className="size-5" />
@@ -126,6 +129,8 @@ function Navbar() {
           </Sheet>
         </div>
       </nav>
+
+      <CartDrawer />
     </motion.header>
   );
 }
