@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { IoBagHandleOutline } from 'react-icons/io5';
 
 import heroImg from '@/assets/hero.png';
-import leafImg from '@/assets/leaf.png';
+// import leafImg from '@/assets/leaf.png';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { fadeRight } from '@/lib/animation';
@@ -14,7 +14,7 @@ function HeroView() {
       className="from-secondary/10 relative overflow-hidden bg-gradient-to-b to-transparent pt-24"
     >
       {/* Decorative leaf */}
-      <motion.img
+      {/* <motion.img
         src={leafImg}
         alt=""
         aria-hidden
@@ -22,7 +22,7 @@ function HeroView() {
         animate={{ opacity: 0.85, x: 0, rotate: 40 }}
         transition={{ duration: 1.2, delay: 0.6 }}
         className="pointer-events-none absolute -top-6 right-1/2 w-[220px] max-w-none blur-[2px] md:w-[300px]"
-      />
+      /> */}
 
       <div className="container relative grid min-h-[640px] grid-cols-1 items-center gap-8 md:grid-cols-2">
         {/* Copy */}
