@@ -58,10 +58,9 @@ function AboutView() {
             viewport={viewportOnce}
             className="text-muted-foreground leading-relaxed"
           >
-            Kaka Kana lahir dari kecintaan pada masakan rumahan. Setiap produk
-            kami diolah dari bahan segar pilihan tanpa pengawet berlebih, lalu
-            dibekukan dengan cara yang tepat agar kualitas dan rasanya tetap
-            terjaga sampai ke meja makan Anda.
+            Kaka Kana lahir dari kecintaan pada masakan rumahan. Setiap produk kami diolah dari
+            bahan segar pilihan tanpa pengawet berlebih, lalu dibekukan dengan cara yang tepat agar
+            kualitas dan rasanya tetap terjaga sampai ke meja makan Anda.
           </motion.p>
 
           <motion.p
@@ -71,8 +70,8 @@ function AboutView() {
             viewport={viewportOnce}
             className="text-muted-foreground leading-relaxed"
           >
-            Praktis disimpan, mudah dihangatkan, dan selalu nikmat — cocok untuk
-            keluarga sibuk yang tetap ingin makan enak dan sehat.
+            Praktis disimpan, mudah dihangatkan, dan selalu nikmat — cocok untuk keluarga sibuk yang
+            tetap ingin makan enak dan sehat.
           </motion.p>
 
           <motion.dl
@@ -84,9 +83,7 @@ function AboutView() {
           >
             {stats.map((stat) => (
               <div key={stat.id} className="text-center md:text-left">
-                <dt className="text-primary font-serif text-3xl font-bold">
-                  {stat.value}
-                </dt>
+                <dt className="text-primary font-serif text-3xl font-bold">{stat.value}</dt>
                 <dd className="text-muted-foreground text-sm">{stat.label}</dd>
               </div>
             ))}

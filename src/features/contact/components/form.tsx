@@ -13,9 +13,7 @@ import type { ContactFormProps } from '../types';
 function errorMessages(errors: unknown[]): string[] {
   return errors
     .map((error) =>
-      typeof error === 'string'
-        ? error
-        : ((error as { message?: string } | null)?.message ?? null)
+      typeof error === 'string' ? error : ((error as { message?: string } | null)?.message ?? null)
     )
     .filter((message): message is string => Boolean(message));
 }
@@ -91,13 +89,7 @@ function ContactForm({ form, isSubmitting }: ContactFormProps) {
         )}
       </form.Field>
 
-      <Button
-        type="submit"
-        variant="brand"
-        size="lg"
-        disabled={isSubmitting}
-        className="w-full"
-      >
+      <Button type="submit" variant="brand" size="lg" disabled={isSubmitting} className="w-full">
         <Send className="size-4" />
         {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
       </Button>

@@ -12,10 +12,7 @@ function MenuSkeleton() {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {Array.from({ length: 4 }).map((_, i) => (
-        <div
-          key={i}
-          className="bg-card overflow-hidden rounded-2xl border shadow-sm"
-        >
+        <div key={i} className="bg-card overflow-hidden rounded-2xl border shadow-sm">
           <div className="bg-muted aspect-[4/3] animate-pulse" />
           <div className="space-y-3 p-5">
             <div className="bg-muted h-3 w-1/3 animate-pulse rounded" />
@@ -29,13 +26,7 @@ function MenuSkeleton() {
   );
 }
 
-function MenuView({
-  menus,
-  isLoading,
-  isError,
-  onRetry,
-  onAddToCart,
-}: MenuViewProps) {
+function MenuView({ menus, isLoading, isError, onRetry, onAddToCart }: MenuViewProps) {
   return (
     <section id="menu" className="py-20 md:py-28">
       <div className="container">
@@ -64,8 +55,7 @@ function MenuView({
             viewport={viewportOnce}
             className="text-muted-foreground"
           >
-            Dari tahu bakso legendaris hingga ceker pedas nampol — semua siap
-            memanjakan lidah.
+            Dari tahu bakso legendaris hingga ceker pedas nampol — semua siap memanjakan lidah.
           </motion.p>
         </div>
 
@@ -73,9 +63,7 @@ function MenuView({
 
         {isError && (
           <div className="flex flex-col items-center gap-4 py-10 text-center">
-            <p className="text-muted-foreground">
-              Gagal memuat menu. Silakan coba lagi.
-            </p>
+            <p className="text-muted-foreground">Gagal memuat menu. Silakan coba lagi.</p>
             <Button variant="outline" onClick={onRetry}>
               Coba Lagi
             </Button>

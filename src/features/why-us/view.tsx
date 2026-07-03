@@ -3,11 +3,7 @@ import { Leaf, ChefHat, ShieldCheck, Snowflake } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  fadeUp,
-  staggerContainer,
-  viewportOnce,
-} from '@/lib/animation';
+import { fadeUp, staggerContainer, viewportOnce } from '@/lib/animation';
 import type { IconType } from '@/types/component';
 
 interface Feature {
@@ -73,8 +69,7 @@ function WhyUsView() {
             viewport={viewportOnce}
             className="text-muted-foreground"
           >
-            Kami berkomitmen menghadirkan makanan beku berkualitas dengan rasa
-            yang tak kompromi.
+            Kami berkomitmen menghadirkan makanan beku berkualitas dengan rasa yang tak kompromi.
           </motion.p>
         </div>
 
@@ -93,9 +88,7 @@ function WhyUsView() {
                     <Icon className="size-7" />
                   </span>
                   <h3 className="text-lg font-semibold">{title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {description}
-                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
                 </CardContent>
               </Card>
             </motion.div>

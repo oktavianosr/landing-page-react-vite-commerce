@@ -33,8 +33,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: 'Dewi K.',
     role: 'Pelanggan Setia',
-    quote:
-      'Ceker nyonyornya pedasnya nampol dan empuk. Sudah langganan tiap minggu, selalu fresh!',
+    quote: 'Ceker nyonyornya pedasnya nampol dan empuk. Sudah langganan tiap minggu, selalu fresh!',
   },
 ];
 
@@ -84,9 +83,7 @@ function TestimonialsView() {
                     </div>
                     <div>
                       <p className="font-semibold">{item.name}</p>
-                      <p className="text-muted-foreground text-sm">
-                        {item.role}
-                      </p>
+                      <p className="text-muted-foreground text-sm">{item.role}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -109,8 +106,8 @@ function TestimonialsView() {
               Siap Menikmati Makanan Terbaik Kami?
             </h2>
             <p className="text-primary-foreground/85">
-              Pesan sekarang dan rasakan kelezatan frozen food homemade Kaka Kana
-              langsung di rumah Anda.
+              Pesan sekarang dan rasakan kelezatan frozen food homemade Kaka Kana langsung di rumah
+              Anda.
             </p>
             <Button
               size="lg"

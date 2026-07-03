@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -p tsconfig.json && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@khencahyo13/notifin-react": "^1.2.3",
@@ -44,6 +46,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "prettier": "^3.9.4",
     "tailwindcss": "^4.3.1",
     "tw-animate-css": "^1.4.0",
     "typescript": "^6.0.3",

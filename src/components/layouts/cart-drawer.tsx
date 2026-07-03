@@ -3,12 +3,7 @@ import { Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { formatRupiah } from '@/lib/number';
 import { useCartStore } from '@/stores/cart-store';
 import { useUiStore } from '@/stores/ui-store';
@@ -46,12 +41,7 @@ function CartDrawer() {
             <p className="text-muted-foreground text-sm">
               Yuk pilih menu favoritmu dan tambahkan ke keranjang.
             </p>
-            <Button
-              variant="outline"
-              className="mt-2"
-              onClick={() => setCartOpen(false)}
-              asChild
-            >
+            <Button variant="outline" className="mt-2" onClick={() => setCartOpen(false)} asChild>
               <a href="#menu">Lihat Menu</a>
             </Button>
           </div>
@@ -77,9 +67,7 @@ function CartDrawer() {
                         <Trash2 className="size-4" />
                       </button>
                     </div>
-                    <p className="text-primary text-sm font-semibold">
-                      {formatRupiah(item.price)}
-                    </p>
+                    <p className="text-primary text-sm font-semibold">{formatRupiah(item.price)}</p>
                     <div className="mt-auto flex items-center gap-2 pt-2">
                       <Button
                         variant="outline"
@@ -90,9 +78,7 @@ function CartDrawer() {
                       >
                         <Minus className="size-3.5" />
                       </Button>
-                      <span className="w-6 text-center text-sm font-semibold">
-                        {item.quantity}
-                      </span>
+                      <span className="w-6 text-center text-sm font-semibold">{item.quantity}</span>
                       <Button
                         variant="outline"
                         size="icon"
@@ -112,16 +98,9 @@ function CartDrawer() {
               <Separator />
               <div className="flex items-center justify-between py-4">
                 <span className="text-muted-foreground">Total</span>
-                <span className="text-primary text-xl font-bold">
-                  {formatRupiah(total)}
-                </span>
+                <span className="text-primary text-xl font-bold">{formatRupiah(total)}</span>
               </div>
-              <Button
-                variant="brand"
-                size="lg"
-                className="mb-6 w-full"
-                onClick={handleCheckout}
-              >
+              <Button variant="brand" size="lg" className="mb-6 w-full" onClick={handleCheckout}>
                 Checkout
               </Button>
             </div>

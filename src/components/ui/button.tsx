@@ -12,14 +12,11 @@ const buttonVariants = cva(
         default: 'bg-primary text-primary-foreground shadow-sm hover:bg-primary/90',
         brand:
           'bg-primary text-primary-foreground px-6 py-3 shadow-[0px_10px_14px_-7px] shadow-primary/60 hover:scale-105',
-        secondary:
-          'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90',
-        outline:
-          'border border-border bg-background hover:bg-accent hover:text-accent-foreground',
+        secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90',
+        outline: 'border border-border bg-background hover:bg-accent hover:text-accent-foreground',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
-        destructive:
-          'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
+        destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
       },
       size: {
         default: 'h-10 px-5 py-2 has-[>svg]:px-4',
@@ -41,8 +38,7 @@ function Button({
   size,
   asChild = false,
   ...props
-}: ComponentProps<'button'> &
-  VariantProps<typeof buttonVariants> & { asChild?: boolean }) {
+}: ComponentProps<'button'> & VariantProps<typeof buttonVariants> & { asChild?: boolean }) {
   const Comp = asChild ? Slot : 'button';
   return (
     <Comp

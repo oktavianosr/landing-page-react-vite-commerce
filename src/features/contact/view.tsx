@@ -10,18 +10,17 @@ import type { IconType } from '@/types/component';
 import ContactForm from './components/form';
 import type { ContactViewProps } from './types';
 
-const contactInfo: { id: number; icon: IconType; label: string; value: string }[] =
-  [
-    { id: 1, icon: Phone, label: 'Telepon', value: '+62 812-3456-7890' },
-    { id: 2, icon: Mail, label: 'Email', value: 'halo@kakakana.id' },
-    {
-      id: 3,
-      icon: MapPin,
-      label: 'Alamat',
-      value: 'Jl. Contoh No. 123, Surabaya',
-    },
-    { id: 4, icon: Clock, label: 'Jam Buka', value: 'Setiap hari, 08.00–20.00' },
-  ];
+const contactInfo: { id: number; icon: IconType; label: string; value: string }[] = [
+  { id: 1, icon: Phone, label: 'Telepon', value: '+62 812-3456-7890' },
+  { id: 2, icon: Mail, label: 'Email', value: 'halo@kakakana.id' },
+  {
+    id: 3,
+    icon: MapPin,
+    label: 'Alamat',
+    value: 'Jl. Contoh No. 123, Surabaya',
+  },
+  { id: 4, icon: Clock, label: 'Jam Buka', value: 'Setiap hari, 08.00–20.00' },
+];
 
 function ContactView({ form, isSubmitting }: ContactViewProps) {
   return (

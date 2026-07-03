@@ -27,11 +27,7 @@ function HeroView() {
       <div className="container relative grid min-h-[640px] grid-cols-1 items-center gap-8 md:grid-cols-2">
         {/* Copy */}
         <div className="relative z-10 space-y-6 py-14 text-center md:py-0 md:text-left">
-          <motion.div
-            variants={fadeRight(0.3)}
-            initial="hidden"
-            animate="visible"
-          >
+          <motion.div variants={fadeRight(0.3)} initial="hidden" animate="visible">
             <Badge variant="secondary" className="px-4 py-1.5 text-sm">
               🌿 Fresh &amp; Worthy
             </Badge>
@@ -43,8 +39,7 @@ function HeroView() {
             animate="visible"
             className="font-serif text-5xl leading-tight font-bold text-balance lg:text-6xl"
           >
-            Frozen Food Homemade{' '}
-            <span className="text-primary">Kaka</span>{' '}
+            Frozen Food Homemade <span className="text-primary">Kaka</span>{' '}
             <span className="text-secondary">Kana</span>
           </motion.h1>
 
@@ -54,8 +49,8 @@ function HeroView() {
             animate="visible"
             className="text-muted-foreground mx-auto max-w-md text-lg md:mx-0"
           >
-            Pesan sekarang dan nikmati makanan terbaik kami — dibuat segar setiap
-            hari dengan bahan pilihan dan resep rumahan.
+            Pesan sekarang dan nikmati makanan terbaik kami — dibuat segar setiap hari dengan bahan
+            pilihan dan resep rumahan.
           </motion.p>
 
           <motion.div

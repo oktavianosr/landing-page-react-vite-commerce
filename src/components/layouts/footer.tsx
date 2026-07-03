@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone } from 'lucide-react';
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLeaf,
-  FaTiktok,
-  FaWhatsapp,
-} from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLeaf, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 import { fadeUp, viewportOnce } from '@/lib/animation';
 
@@ -37,8 +31,8 @@ function Footer() {
             <FaLeaf className="text-secondary" aria-hidden />
           </div>
           <p className="text-background/70 max-w-xs text-sm leading-relaxed">
-            Frozen food & makanan homemade yang fresh, higienis, dan worthy.
-            Dibuat dengan bahan pilihan untuk keluarga Anda.
+            Frozen food & makanan homemade yang fresh, higienis, dan worthy. Dibuat dengan bahan
+            pilihan untuk keluarga Anda.
           </p>
         </div>
 

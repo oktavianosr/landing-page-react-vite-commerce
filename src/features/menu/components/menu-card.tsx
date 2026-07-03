@@ -32,13 +32,9 @@ function MenuCard({ menu, onAddToCart }: MenuCardProps) {
             {menu.category}
           </span>
           <h3 className="text-lg font-semibold">{menu.name}</h3>
-          <p className="text-muted-foreground line-clamp-2 text-sm">
-            {menu.description}
-          </p>
+          <p className="text-muted-foreground line-clamp-2 text-sm">{menu.description}</p>
           <div className="mt-3 flex items-center justify-between">
-            <span className="text-primary text-xl font-bold">
-              {formatRupiah(menu.price)}
-            </span>
+            <span className="text-primary text-xl font-bold">{formatRupiah(menu.price)}</span>
             <Button
               size="icon"
               variant="brand"
