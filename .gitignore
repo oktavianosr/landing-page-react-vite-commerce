@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 docs/*
+.claude/*
 
 # TypeScript incremental build info
 *.tsbuildinfo
