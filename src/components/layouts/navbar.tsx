@@ -84,9 +84,9 @@ function Navbar() {
             ))}
           </ul>
           <CartButton className="ml-2" />
-          <Button variant="brand" className="ml-1" asChild>
+          {/* <Button variant="brand" className="ml-1" asChild>
             <a href="#menu">Pesan Sekarang</a>
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile actions */}
@@ -118,13 +118,13 @@ function Navbar() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto p-6">
+              {/* <div className="mt-auto p-6">
                 <SheetClose asChild>
-                  <Button variant="brand" className="w-full" asChild>
+                  <Button variant="brand" className="" asChild>
                     <a href="#menu">Pesan Sekarang</a>
                   </Button>
                 </SheetClose>
-              </div>
+              </div> */}
             </SheetContent>
           </Sheet>
         </div>
