@@ -4,7 +4,7 @@ export const checkoutFormSchema = z.object({
   name: z.string().min(1, 'Nama wajib diisi'),
   address: z.string().min(1, 'Alamat wajib diisi'),
   paymentMethod: z.enum(['QRIS', 'Tunai'], {
-    errorMap: () => ({ message: 'Pilih metode pembayaran' }),
+    message: 'Pilih metode pembayaran',
   }),
   honeypot: z.string().max(0, 'Bot detected'),
 });
