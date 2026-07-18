@@ -76,7 +76,7 @@ function CartDrawer() {
         form.reset();
         setView('cart');
         setCartOpen(false);
-      } catch (error) {
+      } catch {
         notifin.error('Gagal mengirim pesanan', {
           description: 'Nomor WhatsApp belum dikonfigurasi.',
         });
@@ -124,7 +124,12 @@ function CartDrawer() {
                 <p className="text-muted-foreground text-sm">
                   Yuk pilih menu favoritmu dan tambahkan ke keranjang.
                 </p>
-                <Button variant="outline" className="mt-2" onClick={() => setCartOpen(false)} asChild>
+                <Button
+                  variant="outline"
+                  className="mt-2"
+                  onClick={() => setCartOpen(false)}
+                  asChild
+                >
                   <a href="#menu">Lihat Menu</a>
                 </Button>
               </div>
@@ -187,7 +192,12 @@ function CartDrawer() {
                     <span className="text-muted-foreground">Total</span>
                     <span className="text-primary text-xl font-bold">{formatRupiah(total)}</span>
                   </div>
-                  <Button variant="brand" size="lg" className="mb-6 w-full" onClick={handleCheckout}>
+                  <Button
+                    variant="brand"
+                    size="lg"
+                    className="mb-6 w-full"
+                    onClick={handleCheckout}
+                  >
                     Checkout
                   </Button>
                 </div>
