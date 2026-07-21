@@ -22,7 +22,7 @@ function MenuCard({ menu, onAddToCart }: MenuCardProps) {
             className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {menu.featured && (
-            <Badge variant="secondary" className="absolute top-3 left-3">
+            <Badge className="bg-primary text-primary-foreground absolute top-3 left-3 border-transparent">
               Best Seller
             </Badge>
           )}
@@ -38,6 +38,7 @@ function MenuCard({ menu, onAddToCart }: MenuCardProps) {
             <Button
               size="icon"
               variant="brand"
+              className="p-0"
               aria-label={`Tambah ${menu.name} ke keranjang`}
               onClick={() => onAddToCart(menu)}
             >
