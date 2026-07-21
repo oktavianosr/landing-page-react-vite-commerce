@@ -14,8 +14,8 @@ interface CartState {
   total: () => number;
   addItem: (menu: Menu) => void;
   /** Reduce an item's quantity by one; removes it when it hits zero. */
-  decrementItem: (id: number) => void;
-  removeItem: (id: number) => void;
+  decrementItem: (id: string) => void;
+  removeItem: (id: string) => void;
   clear: () => void;
 }
 
